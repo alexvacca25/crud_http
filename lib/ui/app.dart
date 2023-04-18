@@ -1,5 +1,6 @@
 import 'package:crud_http/ui/auth/login.dart';
 import 'package:crud_http/ui/auth/register.dart';
+import 'package:crud_http/ui/content/articles/listarticles.dart';
 import 'package:crud_http/ui/content/notes/add.dart';
 import 'package:crud_http/ui/content/notes/list.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class App extends StatelessWidget {
         "/register": (context) => const Register(),
         "/addnotes": (context) => const AddNotes(),
         "/listnotes": (context) => const ListNotes(),
+        "/listarticles": (context) => const ListArticles(),
       },
     );
   }
