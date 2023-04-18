@@ -13,11 +13,15 @@ class PeticionesUser {
     final response = await http
         .post(url, body: {'nombre': nombre, 'user': u, 'password': p});
 
+    print(response.statusCode);
+    print(response.body);
     return compute(convertirAlista, response.body);
   }
 
   static List<Mensajes> convertirAlista(String responsebody) {
     final pasar = json.decode(responsebody).cast<Map<String, dynamic>>();
+    print(pasar);
+    print(pasar[0]['mensaje']);
     return pasar.map<Mensajes>((json) => Mensajes.desdeJson(json)).toList();
   }
 

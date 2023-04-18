@@ -1,3 +1,4 @@
+import 'package:crud_http/domain/controller/controllerNotes.dart';
 import 'package:crud_http/domain/controller/controllerUser.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ControlUser controlu = Get.find();
+    ControlNotes controln = Get.find();
     TextEditingController user = TextEditingController();
     TextEditingController pass = TextEditingController();
     return Container(
@@ -88,7 +90,8 @@ class Login extends StatelessWidget {
                                   shouldIconPulse: true,
                                   backgroundColor: Colors.yellow);
                             } else {
-                              Get.toNamed("/listnotes");
+                              controln.listNotes().then((value) => Get.toNamed("/listnotes"));
+                              
                             }
                           });
                         },
