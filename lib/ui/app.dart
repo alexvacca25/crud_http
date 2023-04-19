@@ -3,6 +3,7 @@ import 'package:crud_http/ui/auth/register.dart';
 import 'package:crud_http/ui/content/articles/listarticles.dart';
 import 'package:crud_http/ui/content/notes/add.dart';
 import 'package:crud_http/ui/content/notes/list.dart';
+import 'package:crud_http/ui/content/pets/listPets.dart';
 import 'package:crud_http/ui/content/student/listaStudent.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,6 +25,7 @@ class App extends StatelessWidget {
         "/listnotes": (context) => const ListNotes(),
         "/listarticles": (context) => const ListArticles(),
         "/listaStudent": (context) => const ListStudent(),
+        "/listaPets": (context) => const ListPets(),
       },
     );
   }

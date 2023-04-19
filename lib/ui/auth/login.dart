@@ -1,4 +1,5 @@
 import 'package:crud_http/domain/controller/controllerArticles.dart';
+import 'package:crud_http/domain/controller/controllerPets.dart';
 import 'package:crud_http/domain/controller/controllerStudent.dart';
 //import 'package:crud_http/domain/controller/controllerNotes.dart';
 import 'package:crud_http/domain/controller/controllerUser.dart';
@@ -13,7 +14,9 @@ class Login extends StatelessWidget {
     ControlUser controlu = Get.find();
     // ControlNotes controln = Get.find();
     //ControlArticles controla = Get.find();
-    ControlStudent controle = Get.find();
+    //ControlStudent controle = Get.find();
+    ControlPets controlp = Get.find();
+
     TextEditingController user = TextEditingController();
     TextEditingController pass = TextEditingController();
     return Container(
@@ -94,8 +97,9 @@ class Login extends StatelessWidget {
                                   shouldIconPulse: true,
                                   backgroundColor: Colors.yellow);
                             } else {
-                              controle.getStudentGral().then(
-                                  (value) => Get.toNamed("/listaStudent"));
+                              controlp
+                                  .getPetsGral()
+                                  .then((value) => Get.toNamed("/listaPets"));
                             }
                           });
                         },

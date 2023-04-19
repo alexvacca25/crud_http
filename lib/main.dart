@@ -1,5 +1,6 @@
 import 'package:crud_http/domain/controller/controllerArticles.dart';
 import 'package:crud_http/domain/controller/controllerNotes.dart';
+import 'package:crud_http/domain/controller/controllerPets.dart';
 import 'package:crud_http/domain/controller/controllerStudent.dart';
 import 'package:crud_http/domain/controller/controllerUser.dart';
 import 'package:crud_http/ui/app.dart';
@@ -11,5 +12,6 @@ void main() {
   Get.put(ControlNotes());
   Get.put(ControlArticles());
   Get.put(ControlStudent());
+  Get.put(ControlPets());
   runApp(const App());
 }
